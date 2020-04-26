@@ -10,6 +10,10 @@
 	<script src="js/jquery-3.4.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="fontawesome/js/fontawesome.min.js"></script>
+    <script>
+    	var tarih=new Date();
+      	var yasGrubu=tarih.getFullYear()-2001;
+    </script>
   </head>
   <body>
 	<!--Header Başlangıç-->
@@ -67,7 +71,7 @@
 								        <tr>
 											<th>Yaş</th>
 											<td>:</td>
-											<td>19</td>
+											<td><script>document.write(yasGrubu);</script></td>
 										</tr>
 										<tr>
 											<th>Adres</th>
@@ -178,7 +182,7 @@
 										</a>
 									</div>
 									<div class="col-md-4 text-center float-left oyun">
-										<a href="https://play.google.com/store/apps/details?id=com.ParlakSoftware.Escape" target="_blank">
+										<a href="https://play.google.com/store/apps/details?id=com.ParlakSoftware.Vadi" target="_blank">
 										    <h3 class="oyunTitle">Vadi</h3>
 										    <img src="images/games/vadi.png" width="192" alt="">
 										</a>
