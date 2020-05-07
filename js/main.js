@@ -21,17 +21,30 @@ $(document).ready(function(){
 	});
 
 	//Site İçi Yönlendirme
-	  $("a").on('click', function(event) {
-	    if (this.hash !== "") {
-	      event.preventDefault();
-	      var hash = this.hash;
-	      $('html, body').animate({
-	        scrollTop: $(hash).offset().top
-	      }, 800, function(){
-	        window.location.hash = hash;
-	      });
-	    } 
-	  });
+	$("a").on('click', function(event) {
+		if (this.hash !== "") {
+			event.preventDefault();
+			var hash = this.hash;
+			$('html, body').animate({
+				scrollTop: $(hash).offset().top
+			}, 800, function(){
+				window.location.hash = hash;
+			});
+		} 
+	});
+
+
+	//LOGİN SAYFASI
+	var url_string = window.location.search;
+	urlParams = new URLSearchParams(url_string);
+	product = urlParams.get('durum');
+	if(product=="hatali"){
+		$("#hatali").show(); 
+	}
+	else
+	{
+		$("#hatali").hide(); 
+	}
 });
 
 //SABİT HEADER
@@ -47,3 +60,24 @@ function menuKontrol() {
 		menu.classList.remove("sticky");
 	}
 }
+
+//MAP
+function mapGuncelle() {
+	var map = document.getElementById("map");
+	map.style.height = map.offsetWidth+"px";
+}
+mapGuncelle();
+setInterval("mapGuncelle()", 0);
+
+//ŞEHRİM DETAY SAYFASI
+
+var url_string = window.location.search;
+urlParams = new URLSearchParams(url_string);
+yer = urlParams.get('yer');
+if(yer == null || (yer!="mevlanaTurbesi" && yer != 'alaeddinCami' && yer != 'inceMinareliMedrese' && yer != 'karatayMedresesi' && yer != 'kilistraAntikKenti'
+	&& yer != 'kizorenObrukGolu' && yer != 'kubadabad' && yer != 'makeGolu' && yer != 'nasreddinHocaTurbesi' && yer != 'selimiyeCami'
+	 && yer != 'silleKoyu' && yer != 'tarihiHisarlikCami' && yer != 'yerkopruSelalesi' && yer != 'zengibarKalesi')){
+	alert("Anasayfaya Yönlendiriliyorsunuz");
+	window.location = "index.html";
+}
+document.getElementById(yer).style.display = "block";

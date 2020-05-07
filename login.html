@@ -62,21 +62,6 @@
                     <form class="form-signin" action="islem.php" method="POST" style="margin:25px auto;">
                     <h1 class="h3 mb-3 font-weight-normal">Giriş Yap</h1>
                     
-                    <script>
-                      $(document).ready(function(){
-                        var url_string = window.location.search;
-                        urlParams = new URLSearchParams(url_string);
-                        product = urlParams.get('durum');
-                        if(product=="hatali"){
-                          $("#hatali").show(); 
-                        }
-                        else
-                        {
-                          $("#hatali").hide(); 
-                        }
-                      });
-                        
-                    </script>
                     <div id="hatali" class="alert alert-danger">
                       <strong>Hata!</strong> Kullanıcı adınız ya da şifreniz hatalı!
                     </div>
