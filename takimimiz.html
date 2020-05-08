@@ -8,16 +8,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/animated.css">
-	<style type="text/css">
-		blockquote::before,blockquote::after{
-			content: '';
-		} 
-		blockquote{
-			border-left: 5px solid #0a9259;
-			padding-top:0;
-			padding-bottom:0;
-		}
-	</style>
 	<script src="js/jquery-3.4.1.min.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>
 	<script src="fontawesome/js/fontawesome.min.js"></script>
@@ -25,7 +15,7 @@
 <body>
 	<a href="#" class="back-to-top"></a>
 	<!--Header Başlangıç-->
-  	<header id="menuBar">
+	<header id="menuBar">
 		<nav class="navbar navbar-expand-lg shadow-sm menubar">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<i class="fa fa-bars"></i>
@@ -90,22 +80,6 @@
 							<div class="tab-content">
 								<div class="tab-pane fade in active show" id="tarihce">
 									<img style="width:100%;" src="images/takimimiz/konyaspor.png" alt="Tarihçe">
-									<style>
-										.icerik-yazi{
-											margin-top: 20px;
-										}
-										.icerik-yazi h1{
-											font-size: 36px;
-											font-style: italic;
-										}
-										.icerik-yazi h4{
-											font-size: 18px;
-											font-style: italic;
-										}
-										.icerik-yazi p{
-											font-size: 13px;
-										}
-									</style>
 									<blockquote class="icerik-yazi">
 										<h1 class="text-center"><b>1922’den Bugüne ANADOLU KARTALI</b></h1>
 										<br>
@@ -118,7 +92,7 @@
 								</div>
 								<div class="tab-pane fade" id="kulubumuz">
 									<img style="width:100%; margin-bottom: 20px;" src="images/takimimiz/konyaspor.png" alt="Tarihçe">
-									<blockquote>
+									<blockquote class="icerik-yazi">
 										<p>
 											Konyaspor’umuza iki kulübün birleşmesinin ardından 1981 yılından bu yana hizmet eden Zafer’deki kulüp binamız artık günümüz ihtiyaçlarını karşılamada yetersiz kalınca düğmeye basıldı ve Yönetim Kurulumuzun aldığı karar sonucunda İdari Bina ve Çalışma Ofislerinin Konya Büyükşehir Stadyumu’na taşınmasına karar verildi.
 										</p>
@@ -368,7 +342,8 @@
 												<div class="facility-text-wrapper">
 													<h2>Kurumsallaşma Kayacık Tesisleri’nde başladı</h2>
 
-													<blockquote>
+													<blockquote class="icerik-yazi">
+
 														<p>Konya Büyükşehir Belediyesi tarafından yaptırılan Kayacık Tesisleri’nin temeli 12 Aralık 2004’de atıldı.</p>
 
 														<p>Eksikleri Konya Büyükşehir Belediyesi ve ilgili yerler tarafından tamamlanan Büyükşehir Belediyesi Kayacık Tesisleri 24 Kasım 2015 tarihinden itibaren Konyaspor’umuza hizmet vermeye başladı.</p>
@@ -906,7 +881,8 @@
 									<div class="tab-pane fade" id="basarilar">
 										<div>
 											<div class="col-md-12">
-												<blockquote>
+												<blockquote class="icerik-yazi">
+
 													<h3 class="h3">2016-2017 ZİRAAT TÜRKİYE KUPASI ŞAMPİYONLUĞU</h3>
 													<img width="100%" src="images/takimimiz/ziraatKupasi.jpg">
 													<p>
@@ -924,10 +900,10 @@
 										<hr>
 										<div>
 											<div class="col-md-12">
-												<blockquote>
-													<h1 class="h3">2016-2017 SÜPER KUPASI KONYASPOR'UN</h1>
+												<blockquote class="icerik-yazi">
+													<h3 class="h3">2016-2017 SÜPER KUPASI KONYASPOR'UN</h3>
 													<img width="100%" src="images/takimimiz/superKupa.jpg">
-													<h3 class="h3">Tarih: 6 Ağustos 2017</h3>
+													<h4 class="mt-2">Tarih: 6 Ağustos 2017</h4>
 													<p>
 														Turkcell’in sponsorluğunda, 2017’de 11. kez düzenlenen Süper Kupa’yı, Beşiktaş’ı 90+1. dakikadaki penaltı golüyle 2-1 yenen Atiker Konyaspor kazandı. Böylece 3 ay önce ilk kez Türkiye Kupası’nda şampiyon olan yeşil-beyazlı ekip, Süper Kupa’yı da müzesine götürerek bir ilk daha yaşadı.
 													</p>

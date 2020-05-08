@@ -21,7 +21,7 @@ $(document).ready(function(){
 	});
 
 	//Site İçi Yönlendirme
-	$("a").on('click', function(event) {
+	$("#buraya").on('click', function(event) {
 		if (this.hash !== "") {
 			event.preventDefault();
 			var hash = this.hash;
@@ -45,6 +45,36 @@ $(document).ready(function(){
 	{
 		$("#hatali").hide(); 
 	}
+
+	//ŞEHRİM DETAY SAYFASI
+
+	var url_string = window.location.search;
+	urlParams = new URLSearchParams(url_string);
+	yer = urlParams.get('yer');
+
+	if(window.location.pathname.split('/')[3] == "sehrim-detay.html"){
+		if(yer == null || (yer!="mevlanaTurbesi" && yer != 'alaeddinCami' && yer != 'inceMinareliMedrese' && yer != 'karatayMedresesi' && yer != 'kilistraAntikKenti'
+			&& yer != 'kizorenObrukGolu' && yer != 'kubadabad' && yer != 'makeGolu' && yer != 'nasreddinHocaTurbesi' && yer != 'selimiyeCami'
+			&& yer != 'silleKoyu' && yer != 'tarihiHisarlikCami' && yer != 'yerkopruSelalesi' && yer != 'zengibarKalesi')){
+			alert("Anasayfaya Yönlendiriliyorsunuz");
+		window.location = "index.html";
+	}
+}
+
+document.getElementById(yer).style.display = "block";
+var slider = document.getElementsByClassName(yer);
+var i;
+for (i = 0; i < slider.length; i++) {
+	slider[i].classList.add("mySlides");
+}
+
+var dot = document.getElementsByClassName(yer+"d");
+var j;
+for (j = 0; j < dot.length; j++) {
+	dot[0].click();
+	dot[j].classList.add("dot");
+}
+
 });
 
 //SABİT HEADER
@@ -63,21 +93,21 @@ function menuKontrol() {
 
 //MAP
 function mapGuncelle() {
-	var map = document.getElementById("map");
-	map.style.height = map.offsetWidth+"px";
+	var map = document.getElementsByClassName("map");
+	for(var i=0; i< map.length; i++){
+		map[i].style.height  = map[i].offsetWidth+"px";;
+	}
 }
 mapGuncelle();
 setInterval("mapGuncelle()", 0);
 
-//ŞEHRİM DETAY SAYFASI
-
-var url_string = window.location.search;
-urlParams = new URLSearchParams(url_string);
-yer = urlParams.get('yer');
-if(yer == null || (yer!="mevlanaTurbesi" && yer != 'alaeddinCami' && yer != 'inceMinareliMedrese' && yer != 'karatayMedresesi' && yer != 'kilistraAntikKenti'
-	&& yer != 'kizorenObrukGolu' && yer != 'kubadabad' && yer != 'makeGolu' && yer != 'nasreddinHocaTurbesi' && yer != 'selimiyeCami'
-	 && yer != 'silleKoyu' && yer != 'tarihiHisarlikCami' && yer != 'yerkopruSelalesi' && yer != 'zengibarKalesi')){
-	alert("Anasayfaya Yönlendiriliyorsunuz");
-	window.location = "index.html";
+//Video
+//MAP
+function videoGuncelle() {
+	var video = document.getElementsByClassName("video");
+	for(var i=0; i< video.length; i++){
+		video[i].style.height  = video[i].offsetWidth+"px";;
+	}
 }
-document.getElementById(yer).style.display = "block";
+videoGuncelle();
+setInterval("videoGuncelle()", 0);
