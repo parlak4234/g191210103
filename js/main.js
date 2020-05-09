@@ -102,7 +102,6 @@ mapGuncelle();
 setInterval("mapGuncelle()", 0);
 
 //Video
-//MAP
 function videoGuncelle() {
 	var video = document.getElementsByClassName("video");
 	for(var i=0; i< video.length; i++){
@@ -111,3 +110,4 @@ function videoGuncelle() {
 }
 videoGuncelle();
 setInterval("videoGuncelle()", 0);
+
